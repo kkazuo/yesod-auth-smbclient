@@ -24,7 +24,7 @@ import Yesod.Form (
     runInputPost,
     textField)
 
-pid = "posixpam"
+pid = "smbclient"
 
 -- |The smbclient authentication plugin.
 authSmbClient :: YesodAuth m =>
@@ -58,7 +58,7 @@ authSmbClient server domain =
     login toMaster =
         toWidget [hamlet|
 $newline never
-    <div #pamlogin>
+    <div #smbclientlogin>
         <form method=post action=@{toMaster url} .form-horizontal>
             <div .control-group>
                 <label .control-label>
